@@ -888,7 +888,7 @@
         <a href="#courses">课程体系</a>
         <a href="#results">学员成果</a>
         <a href="#reviews">家长评价</a>
-        <a href="#contact" class="nav-cta">立即咨询</a>
+        <a href="wechat-qr.html" class="nav-cta">扫码咨询</a>
     </div>
     <div class="mobile-menu-btn" id="mobileBtn">
         <span></span><span></span><span></span>
@@ -903,7 +903,7 @@
     <a href="#courses" class="overlay-link">课程体系</a>
     <a href="#results" class="overlay-link">学员成果</a>
     <a href="#reviews" class="overlay-link">家长评价</a>
-    <a href="#contact" class="overlay-link">立即咨询</a>
+    <a href="wechat-qr.html" class="overlay-link">扫码咨询</a>
 </div>
 
 <!-- ── Hero ── -->
@@ -919,7 +919,7 @@
         <p class="hero-desc">观察法教学 · 11年专注 · 9万+学员见证</p>
         <div class="hero-btns">
             <a href="#courses" class="btn-primary">了解课程</a>
-            <a href="#contact" class="btn-secondary">预约试听</a>
+            <a href="wechat-qr.html" class="btn-secondary">扫码咨询</a>
         </div>
     </div>
     <div class="hero-scroll">SCROLL</div>
@@ -1215,11 +1215,11 @@
             </div>
             <div class="phil-right reveal">
                 <div class="phil-stat">
-                    <span class="num">8</span>
+                    <span class="num">11</span>
                     <div class="label">年专注教学</div>
                 </div>
                 <div class="phil-stat">
-                    <span class="num">500+</span>
+                    <span class="num">9万+</span>
                     <div class="label">成功学员</div>
                 </div>
                 <div class="phil-stat">
@@ -1336,38 +1336,21 @@
             </div>
 
             <div class="contact-form reveal">
-                <div class="form-title">留下信息，老师联系你</div>
-                <form id="contactForm" onsubmit="handleSubmit(event)">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>孩子姓名</label>
-                            <input type="text" placeholder="请输入孩子姓名" required>
-                        </div>
-                        <div class="form-group">
-                            <label>所在年级</label>
-                            <input type="text" placeholder="如：初三 / 高一" required>
+                <div class="form-title">扫码添加微信咨询</div>
+                <div class="qr-section" style="text-align: center; padding: 30px 20px;">
+                    <div class="qr-container" style="background: #f8f9fa; border-radius: 12px; padding: 25px; margin-bottom: 20px;">
+                        <img src="wechat-qr.jpg" alt="许老师微信二维码" style="width: 180px; height: 180px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                        <div style="margin-top: 15px; font-size: 14px; color: #666;">
+                            <strong style="color: #c9a84c; font-size: 16px;">👆 长按识别二维码</strong><br>
+                            添加许老师企业微信
                         </div>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>家长姓名</label>
-                            <input type="text" placeholder="您的姓名">
-                        </div>
-                        <div class="form-group">
-                            <label>联系电话</label>
-                            <input type="tel" placeholder="方便老师联系您" required>
-                        </div>
+                    <div style="font-size: 13px; color: #999; line-height: 1.8;">
+                        <p>📱 微信：c15792862701</p>
+                        <p>📞 电话：157-9286-2701</p>
+                        <p style="margin-top: 10px; color: #c9a84c;">免费试听，满意再报名</p>
                     </div>
-                    <div class="form-group">
-                        <label>想咨询的课程</label>
-                        <input type="text" placeholder="如：卷面书写速成班">
-                    </div>
-                    <div class="form-group">
-                        <label">留言（选填）</label>
-                        <textarea placeholder="孩子的书写情况 / 想达到的目标等"></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">提交预约信息</button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -1420,17 +1403,10 @@
         link.addEventListener('click', () => navOverlay.classList.remove('active'));
     });
 
-    // 表单提交
+    // 表单已替换为二维码，此函数保留兼容性
     function handleSubmit(e) {
         e.preventDefault();
-        const btn = e.target.querySelector('.form-submit');
-        btn.textContent = '✓ 信息已提交，老师会尽快联系您！';
-        btn.style.background = '#27ae60';
-        setTimeout(() => {
-            btn.textContent = '提交预约信息';
-            btn.style.background = '';
-            e.target.reset();
-        }, 3000);
+        window.location.href = 'wechat-qr.html';
     }
 
     // 平滑滚动
